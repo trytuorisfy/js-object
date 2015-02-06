@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>面向对象</title>
+</head>
+<body>
+	<p><a href="http://javascript.ruanyifeng.com/oop/basic.html" target="_blank">参考点这里！</a></p>
+	<script>
+		var o = {
+		    v: 'hello',
+		    p: [ 'a1', 'a2' ],
+		    f: function f() {
+		        var that = this;//亮点看这里
+		        this.p.forEach(function (item) {
+		            console.log(that.v+' '+item);
+		        });
+		    }
+		}
+
+		o.f()
+
+		var test = {
+			init: function(){
+				this.fun1();
+				this.fun2();
+				this.fun3();
+
+			},
+			fun1: function(){
+				console.log('fun1');
+			},
+			fun2: function(){
+				console.log('fun2')
+			},
+			fun3: function(){
+				console.log('over');
+			}
+		}
+		test.init();
+	</script>
+</body>
+</html>
